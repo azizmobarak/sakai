@@ -1,6 +1,11 @@
 // Sakai's Portal Footer layout and design
 
 .#{$namespace}footer{
+display:none;
+}
+
+/*
+.#{$namespace}footer{
 	@include display-flex;
 	@include justify-content(space-between);
 	@include align-items(center);
@@ -104,4 +109,5 @@
 			}
 		}
 	}
-}
+
+}*/
