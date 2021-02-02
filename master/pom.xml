@@ -1323,11 +1323,12 @@
         <version>${sakai.version}</version>
         <scope>provided</scope>
       </dependency>
+      <!-- https://mvnrepository.com/artifact/org.sakaiproject.portal/sakai-portal-api -->
       <dependency>
         <groupId>org.sakaiproject.portal</groupId>
         <artifactId>sakai-portal-api</artifactId>
-        <version>${sakai.version}</version>
-        <scope>provided</scope>
+        <version>2.9.0</version>
+       <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.sakaiproject.portal</groupId>
