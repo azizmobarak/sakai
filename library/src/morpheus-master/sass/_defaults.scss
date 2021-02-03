@@ -266,3 +266,7 @@ $active-transition-active: box-shadow 100ms ease-in !default;
     --sakai-title-bar-font-weight: $button-font-weight;
     --sakai-font-family: #{$font-family};
 }
+
+header,header>div{
+background-color:white !important;
+}
