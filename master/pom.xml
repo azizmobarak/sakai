@@ -1336,11 +1336,13 @@
         <version>${sakai.version}</version>
         <scope>provided</scope>
       </dependency>
-      <dependency>
-        <groupId>org.sakaiproject.portal</groupId>
-        <artifactId>sakai-portal-util</artifactId>
-        <version>${sakai.version}</version>
-      </dependency>
+     <!-- https://mvnrepository.com/artifact/org.sakaiproject.portal/sakai-portal-util -->
+<dependency>
+    <groupId>org.sakaiproject.portal</groupId>
+    <artifactId>sakai-portal-util</artifactId>
+    <version>20.2</version>
+</dependency>
+
       <dependency>
         <groupId>org.sakaiproject.edu-services.sections</groupId>
         <artifactId>sections-api</artifactId>
