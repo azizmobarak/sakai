@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/library/js/headscripts.js"></script>
+
+     
+
 </head>
 
 <script>
@@ -14,70 +17,70 @@
 
 <style type="text/css">
 
-.card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    margin-top: 2rem;
-    border-color: #000036;
-    border-radius: 1rem;
-    padding: 0.5rem;
-}
-
-.card-img-top {
-    width: 100%;
-    border-top-left-radius: calc(1rem - 1px);
-    border-top-right-radius: calc(1rem - 1px);
-}
-
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-    text-align: center;
-}
-
-.card-body > h4 {
-    font-size:22px;
-    color: #000036;
-    }
-
-.card-body > p {
-    font-size:14px;
-}
-.btn-primary{
-    background-color: #000036;
-    bottom: 2rem;
-}
-
-.jtop{
-    padding: 1rem 3rem;
-    margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: 0.3rem;
-}
-
-.jtop > h1 {
-    font-size:36px;
-}
-
-.jtop > p {
-    font-size:18px;
-}
+    @-webkit-keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+       }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+       }
+   }
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+       }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+       }
+   }
+    .client-slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+   }
+    .client-slider::before, .client-slider::after {
+        background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+        background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+   }
+    .client-slider::after {
+        right: 0;
+        top: 0;
+        -webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+   }
+    .client-slider::before {
+        left: 0;
+        top: 0;
+   }
+    .client-slider .client-slide-track {
+        -webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+        display: -webkit-box;
+        display: flex;
+        width: calc(250px * 14);
+   }
+    .client-slider .client-slide {
+        height: 100px;
+        width: 250px;
+   }
 
 </style>
 
-<body>
+<body style="background-color: #e9ecef;">
 <div class="jumbotron jtop">
-    <h1>Partner</h1>&nbsp;
+    <h1 style="padding:5px">Partners</h1>&nbsp;
 </div>
 
 <div class="container">
@@ -85,73 +88,48 @@
     </div>
 </div>
 
-<script>
-    /*set current year*/
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+<div>
+    <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+    </p>
+</div>
+<br/>
+<div>
+    <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+    </p>
+</div>
+<br><br>
+<div class="client-slider">
+	<div class="client-slide-track">
+		<div class="client-slide">
+			<img src="./images/1.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/2.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/3.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/4.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/5.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/6.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/7.png" height="100" width="250" alt="" />
+		</div>
+		<div class="client-slide">
+			<img src="./images/8.png" height="100" width="250" alt="" />
+		</div>
+		
+	</div>
+</div>
 
-    /*create cards*/
-    //images should be 600x200px
-    var inpt 
-        ="Interconnect Market ** Community;https://www.Interconnect Market **lms.org/Interconnect Market **-community-members;Interconnect Market **c.jpg!"
-        +"Apache Foundation;https://www.apache.org/;apache.png!"
-        +"WebJars;https://www.webjars.org/;webjars.png!"
-        +"jsoup;https://jsoup.org/;jsoup.png!"
-        +"Lombok Project;https://projectlombok.org/;lombok.png!"
-        +"Quartz;https://www.quartz-scheduler.org/;quartz.png!"
-        +"opencsv;http://opencsv.sourceforge.net/;openscv.png!"
-        +"Simple;http://simple.sourceforge.net;simple-xml.png!"
-        +"Spring;https://spring.io;spring.png!"
-        +"SLF4J;https://www.slf4j.org/;slf4j.png!"
-        +"mockito;https://site.mockito.org/;mockito.png!"
-        +"PowerMock;https://github.com/powermock/powermock;powermock.png!"
-        +"Joda-Time;https://www.joda.org/joda-time/;jodatime.png!"
-        +"Weld;https://weld.cdi-spec.org/;weld.png!"
-        +"Jayway JsonPath;https://github.com/json-path/JsonPath;jsonpath.png!"
-        +"dropzone;https://www.dropzonejs.com/;dropzone.png!"
-        +"qTip2;http://qtip2.com/;qtip2.png!"
-        +"handlebars;https://handlebarsjs.com/;handlebars.png!"
-        +"Moment.js;https://momentjs.com/;momentjs.png!"
-        +"jQuery;https://jquery.com/;jquery.jpg!"
-        +"Bootstrap;https://getbootstrap.com/;bootstrap.png!"
-        +"PNotify;https://sciactive.com/pnotify/;pnotify.png!"
-        +"elFinder;https://github.com/Studio-42/elFinder;elfinder.png!"
-        +"Font Awesome;https://fontawesome.com/;fontawesome.png!"
-        +"Cropper;https://fengyuanchen.github.io/cropper/;cropper.png!"
-        +"Select2;https://select2.org/;select2.png!"
-        +"FullCalendar;https://fullcalendar.io/;fullcalendar.png!"
-        +"DataTables;https://datatables.net/;datatables.png!"
-        +"Featherlight;https://noelboss.github.io/featherlight/;featherlight.png!"
-        +"Awesomplete;https://leaverou.github.io/awesomplete/;awesomplete.png!"
-        +"WebRtc;https://webrtc.org/;webrtc.png!"
-        +"RecordRtc;https://github.com/muaz-khan/RecordRTC;recordrtc.png!"
-        +"mathjs;https://mathjs.org/;mathjs.png!"
-        +"jsMath;http://www.math.union.edu/~dpvc/jsMath/welcome.html;jsmath.png!"
-        +"UrlRewriteFilter;https://tuckey.org/urlrewrite/;urlrewritefilter.png!"
-        +"CodeMirror;https://codemirror.net/;codemirror.png!"    
-        +"CKEditor;https://ckeditor.com/;ckeditor.png!"
-        +"Silk Icons;http://www.famfamfam.com/lab/icons/silk/;famfamfam.png";
-    var content = inpt.split("!");
-    var place = document.getElementById("ackList");
-    for(i = 0; i < content.length; i++) {
-        content[i] = content[i].split(";");
-
-        if(content[i][2] == "") {
-            content[i][2] = "placeholder.png";
-        }
-
-        place.innerHTML +=
-         '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">'
-        +    '<div class="card">'
-        +        '<img class="card-img-top" src="acknowledgements_images/' + content[i][2] +'">'
-        +        '<div class="card-body">'
-        +            '<h4>' + content[i][0] + '</h4>'
-        +            '<a target="_blank" href="' + content[i][1] +'" class="btn btn-primary stretched-link btn-block">Explore</a>'
-        +        '</div>'
-        +    '</div>'
-        +'</div>';
-    }
-
-</script>
 
 </body>
 </html>
